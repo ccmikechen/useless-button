@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './styles.css'
 
-export default class ExampleComponent extends Component {
+export default class UselessButton extends Component {
   static propTypes = {
     text: PropTypes.string
   }
@@ -14,9 +14,10 @@ export default class ExampleComponent extends Component {
     } = this.props
 
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+      <button className={styles.button}
+              onClick={() => alert("You are useless!")}>
+        { text }
+      </button>
     )
   }
 }
